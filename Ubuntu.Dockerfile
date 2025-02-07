@@ -9,10 +9,17 @@ RUN apt clean
 
 
 RUN mkdir /var/run/sshd && \
-    echo 'root:root' | chpasswd && \
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     sed -i 's/Port 22/Port 22/' /etc/ssh/sshd_config
+
+
+
+ENV SSH_PASSWORD=root
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/entrypoint.sh"]
 
