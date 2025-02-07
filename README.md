@@ -8,7 +8,7 @@ Latest docker version from your package manager
 
 Nix package manager
 
-#### For M-series Macbooks who want to use Docker
+#### For M-series Macbook users who want to use Docker
 In Docker Desktop app you need to check if Apple Virtualisation Framework and Rosetta 2 is enabled. 
 To do so follow the next steps:
 1. Go to Settings->General->Virtual Machine Options
