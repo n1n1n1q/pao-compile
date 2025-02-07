@@ -13,7 +13,13 @@ Nix package manager
     Put the project.Dockerfile into your main
     > *via CLI*
     > ```
-    > 
+    > sudo docker -f Ubuntu.Dockerfile . -t ubuntu-cxx
+    > ```
+    > *wait for build to finish*
+    > ```
+    > docker run --platform linux/amd64 -d -p 2222:22 ubuntu-cxx
+    > ssh root@localhost
+    > # default password is root
     > ```
 
     > *VSCode*
