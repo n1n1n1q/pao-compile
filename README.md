@@ -17,6 +17,7 @@ To do so follow the next steps:
 4. Select VirtioFS as your file system for containers
 
 ### How to run
+If you want to use ssh default password is 'root' in all cases. To change it, change enviroment variable SSH_PASSWORD
 1. **Docker**  
     Put the project.Dockerfile into your main
     > *via CLI*
