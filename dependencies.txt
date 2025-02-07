@@ -1,0 +1,13 @@
+gcc
+clang
+cmake
+make
+autotools-dev
+libboost-all-dev
+libeigen3-dev
+gdb
+gcc-multilib
+valgrind
+libarchive-dev
+libtbb-dev
+libgsl-dev
