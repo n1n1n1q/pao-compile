@@ -37,7 +37,11 @@ To do so follow the next steps:
     > *CLion*  
     > TBD
 2. **NixOS**
-
+    ```
+    curl -O https://raw.githubusercontent.com/n1n1n1q/paoCompile/blob/main/flake.nix
+    curl -O https://raw.githubusercontent.com/n1n1n1q/paoCompile/blob/main/flake.lock
+    nix develop
+    ```
 ### Packages included
 The enviroments include the following packages: 
 * gcc
