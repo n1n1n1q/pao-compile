@@ -21,7 +21,7 @@ If you want a more detailed guy on using Docker, go to HowToUse.md
 
 If you want to use ssh default password is 'root' in all cases. To change it, change enviroment variable SSH_PASSWORD
 1. **Docker**  
-    Put the project.Dockerfile into your main
+    Put the Ubuntu.Dockerfile into your project dir
     > *via CLI*
     > ```
     > sudo docker -f Ubuntu.Dockerfile . -t ubuntu-cxx
