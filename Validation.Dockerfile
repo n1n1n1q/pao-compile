@@ -22,15 +22,17 @@ RUN apt-get update
 RUN apt-get install pvs-studio -y && apt-get clean
 
 # prepare to be github runner
-RUN mkdir actions-runner && cd actions-runner
+RUN useradd -m runneruser && chown -R runneruser /home/runneruser
+USER runneruser
 
+# Prepare GitHub Actions runner
+WORKDIR /home/runneruser/actions-runner
 # download the runner
 RUN curl -o actions-runner-linux-x64-2.322.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.322.0/actions-runner-linux-x64-2.322.0.tar.gz
 
 # unpack the runner
-RUN tar xzf ./actions-runner-linux-x64-2.322.0.tar.gz
-
-RUN ./config.sh --url ${RUNNER_URL} --token ${RUNNER_TOKEN}
+RUN tar xzf ./actions-runner-linux-x64-2.322.0.tar.gz;chmod +x ./config.sh; 
+RUN ./config.sh --url "${RUNNER_URL}" --token "${RUNNER_TOKEN}"
 
 
 EXPOSE 22
