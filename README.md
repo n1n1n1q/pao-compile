@@ -18,6 +18,7 @@ To do so follow the next steps:
 
 ### How to run
 If you want a more detailed guy on using Docker, go to HowToUse.md
+
 If you want to use ssh default password is 'root' in all cases. To change it, change enviroment variable SSH_PASSWORD
 1. **Docker**  
     Put the project.Dockerfile into your main
