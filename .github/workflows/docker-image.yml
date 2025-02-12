@@ -44,6 +44,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: Alpine.Dockerfile
+          file: Validation.Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/pao-compile:alpine
+          tags: ghcr.io/${{ github.repository_owner }}/pao-compile:validation
