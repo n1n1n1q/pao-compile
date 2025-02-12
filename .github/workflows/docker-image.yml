@@ -40,3 +40,10 @@ jobs:
           file: Alpine.Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/pao-compile:alpine
+      - name: Build and push Alpine base image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: Alpine.Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/pao-compile:alpine
